@@ -108,6 +108,7 @@ namespace libUniversal
             return (int)command.LastInsertedId;
         }
 
+
         public static DateTime? parseDateTime(MySqlDataReader reader, string fieldName)
         {
             if (DBNull.Value.Equals(reader[fieldName]))
@@ -129,7 +130,39 @@ namespace libUniversal
             }
         }
 
+        public static object parseParameter(object parameter)
+        {
+            return ((parameter == null) ? DBNull.Value : parameter);
+        }
 
+
+        public static int parseInteger(MySqlDataReader reader, string fieldName)
+        {
+            if (DBNull.Value.Equals(reader[fieldName]))
+            {
+                return 0;
+            }
+            return Convert.ToInt32(reader[fieldName]);
+        }
+
+        public static string parseString(MySqlDataReader reader, string fieldName)
+        {
+            if (DBNull.Value.Equals(reader[fieldName]))
+            {
+                return "";
+            }
+            return Convert.ToString(reader[fieldName]);
+        }
+
+
+        public static bool parseBoolean(MySqlDataReader reader, string fieldName)
+        {
+            if (DBNull.Value.Equals(reader[fieldName]))
+            {
+                return false;
+            }
+            return Convert.ToBoolean(reader[fieldName]);
+        }
 
     }
 }
