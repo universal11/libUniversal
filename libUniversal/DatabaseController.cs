@@ -50,7 +50,7 @@ namespace libUniversal
             }
             catch (Exception exception)
             {
-                System.Console.WriteLine(exception.ToString());
+                System.Diagnostics.Debug.WriteLine(exception.ToString());
             }
 
         }
@@ -65,7 +65,7 @@ namespace libUniversal
             }
             catch (Exception exception)
             {
-                System.Console.WriteLine(exception.ToString());
+                System.Diagnostics.Debug.WriteLine(exception.ToString());
             }
             return result;
         }
@@ -80,7 +80,7 @@ namespace libUniversal
             }
             catch (Exception exception)
             {
-                System.Console.WriteLine(exception.ToString());
+                System.Diagnostics.Debug.WriteLine(exception.ToString());
             }
             return result;
         }
@@ -98,7 +98,7 @@ namespace libUniversal
             }
             catch (Exception exception)
             {
-                System.Console.WriteLine(exception.ToString());
+                System.Diagnostics.Debug.WriteLine(exception.ToString());
             }
             return result;
         }
@@ -126,7 +126,7 @@ namespace libUniversal
             }
             catch (Exception ex)
             {
-                System.Console.WriteLine(ex.ToString());
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
             }
         }
 
