@@ -8,7 +8,7 @@ using System.Data;
 
 namespace libUniversal
 {
-    public class MSQLDatabaseController
+    public class MSSQLDatabaseController
     {
         public SqlConnection connection = null;
         string connectionString = null;
@@ -25,17 +25,17 @@ namespace libUniversal
         }
 
 
-        public static MSQLDatabaseController create(string connectionName)
+        public static MSSQLDatabaseController create(string connectionName)
         {
-            MSQLDatabaseController databaseController = new MSQLDatabaseController();
+            MSSQLDatabaseController databaseController = new MSSQLDatabaseController();
             databaseController.init(connectionName);
             databaseController.connect();
             return databaseController;
         }
 
-        public static MSQLDatabaseController createWithConnect(string connectionName)
+        public static MSSQLDatabaseController createWithConnect(string connectionName)
         {
-            MSQLDatabaseController databaseController = new MSQLDatabaseController();
+            MSSQLDatabaseController databaseController = new MSSQLDatabaseController();
             databaseController.init(connectionName);
             databaseController.connect();
             return databaseController;

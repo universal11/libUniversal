@@ -68,7 +68,7 @@
   <ItemGroup>
     <Compile Include="DatabaseController.cs" />
     <Compile Include="HttpRequest.cs" />
-    <Compile Include="MSQLDatabaseController.cs" />
+    <Compile Include="MSSQLDatabaseController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
