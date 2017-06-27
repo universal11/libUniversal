@@ -140,7 +140,7 @@ namespace libUniversal
         {
             if (DBNull.Value.Equals(reader[fieldName]))
             {
-                return 0;
+                return -1;
             }
             return Convert.ToInt32(reader[fieldName]);
         }
