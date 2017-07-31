@@ -145,6 +145,15 @@ namespace libUniversal
             return Convert.ToInt32(reader[fieldName]);
         }
 
+        public static decimal parseDecimal(MySqlDataReader reader, string fieldName)
+        {
+            if(DBNull.Value.Equals(reader[fieldName]))
+            {
+                return -1;
+            }
+            return Convert.ToDecimal(reader[fieldName]);
+        }
+
         public static string parseString(MySqlDataReader reader, string fieldName)
         {
             if (DBNull.Value.Equals(reader[fieldName]))
