@@ -85,6 +85,21 @@ namespace libUniversal
             return result;
         }
 
+        public int delete(MySqlCommand command)
+        {
+            int result = 0;
+            try
+            {
+                result = command.ExecuteNonQuery();
+
+            }
+            catch(Exception exception)
+            {
+                System.Diagnostics.Debug.WriteLine(exception.ToString());
+            }
+            return result;
+        }
+
         ///<summary>
         /// Performs insert and returns number of rows.
         ///</summary>
